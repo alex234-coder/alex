@@ -1,0 +1,78 @@
+/* src/input.css */
+@import "tailwindcss";
+
+.navHeader{
+    @apply flex justify-between p-4 shadow-sm;
+    nav{
+        @apply md:flex gap-4 absolute hidden md:static top-10 right-2;
+    }
+        a{
+            @apply block;
+        }
+        span{
+            @apply md:hidden hover:block;
+        }
+    }
+
+
+.hero{
+    @apply flex justify-center items-center w-full h-[100vh] bg-[url(./assets/images/hero.jpg)];
+}
+
+section{
+    @apply md:flex gap-5;
+     > div{
+        @apply border-2 border-black shadow-lg rounded-[1rem] overflow-hidden;
+        p {
+            @apply py-4 px-8;
+        }
+    }
+}
+
+.Newsletter{
+    @apply p-9 max-w-[600px] shadow-lg rounded-xl mx-auto my-9;
+    h2{
+        @apply text-center font-semibold text-[1.5rem] mb-5;
+    }
+    >div{
+        @apply flex justify-center items-center;
+    }
+    .inputDiv{
+        @apply w-full md:flex gap-4;
+        label{
+            @apply block;
+        }
+        input{
+            @apply shadow-lg py-1 px-2 md:w-[300px]! focus: outline 0 rounded-lg w-full mt-4;
+        }
+        button{
+            @apply py-1 px-3 md:w-[200px]! rounded-lg shadow-lg bg-green-300 text-white w-full mt-4;
+        }
+    }
+}
+
+
+    /* @apply flex flex-col items-center gap-4 mt-10 border-2 border-black shadow-lg rounded-[1rem] max-w-[500px] my-5 mx-auto padding-5;
+    > div{
+        @apply flex gap-4;
+        input{
+            @apply border-2 border-gray-400 rounded-lg p-2;
+        }
+        button{
+            @apply bg-blue-500 text-white rounded-lg p-2;
+        }
+    } */
+    
+
+    
+   
+
+footer{
+    @apply text-center p-5 text-white bg-gray-800;
+}
+
+/*starting and watching tailwindcss*/
+/*npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --watch*/
+
+/* Installing tailwindcss */
+/* npm install tailwindcss @tailwindcss/cli */
